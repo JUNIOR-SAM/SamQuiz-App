@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNIN PAGE</title>
+  <link rel="stylesheet" href="signin.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+  <div class="w-100 d-flex flex-lg-row justify-content-center align-items-center ms-4 me-4 mt-5 mb-5">
+
+    <!-- Left Banner -->
+    <div class="bg text-center shadow">
+      <h1 class="fs-4 word1 px-2" style="color:rgba(248, 117, 9, 1);">WELCOME BACK TO SAM QUIZ</h1>
+      <p class="fw-bold pt-lg-4 pt-0 fs-6 text-white">Login to your account!</p>
+    </div>
+
+    <!-- Sign-In Form -->
+    <div class="bg2 text-center shadow pt-lg-5 pt-4">
+      <h1 class="text-light pb-4 fs-4">Sign-In Page</h1>
+
+      <div class="input-icon-container mb-3">
+        <input type="email" placeholder="Enter your email" id="email" />
+        <i class='bx bx-envelope bxi'></i>
+      </div>
+
+      <div class="input-icon-container mb-3">
+        <input type="password" placeholder="Enter your password" id="password" />
+        <i class='bx bx-lock bxi'></i>
+      </div>
+
+      <!-- Upload profile picture -->
+      <div class="input-icon-container mb-3 ">
+        <input type="file" id="manualUserPhoto" accept="image/*" class="text-white pt-1"/>
+      </div>
+
+      <p class="pt-1 word2 fw-bold" style="color: rgb(231,130,50);">
+        I do not have an account? 
+        <a href="index.html" style="text-decoration: none;">
+          <span class="text-light fw-bold">Sign up</span>
+        </a>
+      </p>
+
+      <button class="mt-lg-3 mt-0 btn w-75 text-white fw-bold" onclick="signIn()" style="background-color: rgba(248, 117, 9, 1);">
+        <span id="sub">Sign in</span>
+      </button>
+
+      <p class="text-light mt-3 fs-6 fw-bold">or</p>
+      <p class="text-light word2">sign in with social platform</p>
+
+      <div class="mt-lg-4 mt-0 d-flex justify-content-center align-items-center gap-4 fs-3 mt-4">
+        <div><i class='bx bxl-google' onclick="inGoogle()" id="b"></i></div>
+        <div><i class='bx bxl-github' onclick="inGit()" id="b"></i></div>
+        <div><i class='bx bxl-facebook' id="b"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script type="module" src="signin.js"></script>
+</body>
+</html>
