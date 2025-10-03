@@ -1,11 +1,4 @@
-// quiz.js
-
-// ----------------------------------------------------------------------
 // 1. GLOBAL VARIABLES & DASHBOARD LOADING (Keep this at the very top)
-// ----------------------------------------------------------------------
-
-
-
 
 let questionsData = []; // Global array to store fetched questions
 const QUIZ_API_URL = "https://opentdb.com/api.php"; 
@@ -19,9 +12,7 @@ const resultsContainer = document.getElementById('resultsContainer');
 let currentQuestionIndex = 0; 
 
 
-// ----------------------------------------------------------------------
 // 2. QUIZ CORE LOGIC FUNCTIONS
-// ----------------------------------------------------------------------
 
 const generateQuiz = async () => {
     // 1. Get user input
