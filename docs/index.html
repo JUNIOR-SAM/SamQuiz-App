@@ -1,73 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGNUP PAGE</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bootstrap.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-  <div class="w-100 d-flex flex-lg-row  justify-content-center align-items-center  ms-4 me-4 mt-5 mb-5">
-    <div class="bg   text-center shadow">
-      <h1 class="fs-4 word1  text-white" >WELCOME TO QUIZ SIGNUP</h1>
-      <!-- <p class="pt-lg-5 pt-0 fst-italic  px-5  fw-bold word1">where you can add note, add image, and perform other function. </p> -->
-      <p class="fw-bold pt-lg-5 pt-0 fs-6 text-white ">Create your account!</p>
-    </div>
-
-    <div class="bg2    text-center shadow pt-lg-4 pt-4">
-      <h1 class="text-light pb-4 fs-4">Signup page</h1>
-      <div class="input-icon-container mb-3">
-        <input type="text" placeholder="Enter your last name"  id="fName" />
-        <i class='bx bx-user bxi'></i>
-      </div>
-        <div class="input-icon-container mb-3">
-        <input type="text" placeholder="Enter your last name" id="lName" />
-        <i class='bx bx-user bxi'></i>
-      </div>
-      <div class="input-icon-container mb-3">
-        <input type="email" placeholder="Enter your email" id="email" />
-        <i class='bx bx-envelope bxi'></i>
-      </div>
-      <div class="input-icon-container mb-3">
-        <input type="text" placeholder="Enter your password" id="password" />
-        <i class='bx bx-lock bxi'></i>
-      </div>
-
-
-      <p class="pt-lg- pt-1 word2 fw-bold" style="color:rgb(231,130,50);">Already have an account? <a href="signin.html" style="text-decoration: none;"> <span
-            class="text-light fw-bold">Sign in</span></a></p>
-      <button class="mt-lg-3 mt-0 btn w-75 text-white fw-bold  " onclick="signUp()" style="background-color: rgba(248, 117, 9, 1);border:none;"><span id="sub">Sign up</span>
-        <svg viewBox="25 25 50 50" id="load">
-          <circle r="20" cy="50" cx="50"></circle>
-        </svg> </button>
-      <!-- <button class="btn mt-4 mt-lg-5 mb-lg-3 mb-0 rounded-5 text-white fw-bold border border-black border-2" onclick="signIn()"><span id="sub">Sign in</span>
-        <svg viewBox="25 25 50 50" id="load">
-        <circle r="20" cy="50" cx="50"></circle>
-        </svg> 
-        </button> -->
-      <p class="text-light mt-3 fs-6 fw-bold">or</p>
-      <p class="text-light word2">you sign up with social platform </p>
-      <div class=" mt-lg-4 mt-0 d-flex justify-content-center align-items-center gap-4 fs-3 mt-4">
-        <div>
-          <i class='bx bxl-google' id="b" onclick="signGoogle()"></i>
+<body style="overflow-x: hidden;overflow-y: hidden;">
+      <nav class="navbar navbar-expand-lg " style="background-color: rgb(37,43,65);height: 60px;">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-2 fw-bold text-white fst-italic pe-5  " href="#">SAM QUIZ</a>
+          <button class="navbar-toggler border border-light bg-light border-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ps-4 mt-1 pb-3 rounded-bottom-4" id="navbarScroll" style="background-color: rgb(37,43,65); height: 10px;">
+            <!-- <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll " style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold text-white ps-lg-5 ps-0" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-white ps-lg-5 ps-0" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold text-white ps-lg-5 ps-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contact Us
+                </a>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item fw-bold text-black" href="#">+2349030030518</a></li>
+                  <li><hr class="dropdown-divider bg-primary"></li>
+                  <li><a class="dropdown-item fw-bold text-black" href="#">oyebodes19@gmail.com</a></li>
+                  <li><hr class="dropdown-divider  bg-primary"></li>
+                  <li><a class="dropdown-item fw-bold text-black" href="#">oluwatowojunior777@gmail.com</a></li>
+                </ul>
+              </li>
+            </ul> -->
+            <form class="d-flex gap-5 ms-auto    mt-lg-1 mt-5 mb-lg-0 mb-4" role="search">
+            <a href="Signup.html"> <button class="btn" type="button">Sign Up</button> </a>
+            <a href="Signin.html"> <button class="btn" type="button">Sign In</button> </a>
+            </form>
+          </div>
         </div>
-        <div>
-          <i class='bx bxl-github' id="b" onclick="signGit()"></i>
-        </div>
-        <div>
-          <i class='bx bxl-facebook' id="b"></i>
-        </div>
-      </div>
-    </div>
-  </div>
+      </nav>
 
+      <section class="imager">
+        <a href="signup.html" class="col-12"><button class="d-flex justify-content-center  align-items-center mx-auto col-lg-2 py-3 rounded-3 text-white" style="background-color: rgb(255, 115, 0);border:none">TAKE YOUR TEST</button></a>
+        <!-- <img src="" alt="" class="w-100" style=" background-attachment: fixed; background-size: cover; background-position: center; height: 100vh; "> -->
+      </section>
+
+
+      <!-- <div class=" w-100 text-center fw-bold pt-3 fs-3 rounded-bottom-circle mt-3" style="height: 70px;background-color: rgb(37,43,65);color:  rgb(253, 114, 0);">DESIGNED BY DEV SAM</div> -->
 </body>
-<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script type="module" src="script.js"></script>
-
 </html>

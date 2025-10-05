@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNUP PAGE</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+  <div class="w-100 d-flex flex-lg-row  justify-content-center align-items-center  ms-4 me-4 mt-5 mb-5">
+    <div class="bg   text-center shadow">
+      <h1 class="fs-4 word1  text-white" >WELCOME TO QUIZ SIGNUP</h1>
+      <!-- <p class="pt-lg-5 pt-0 fst-italic  px-5  fw-bold word1">where you can add note, add image, and perform other function. </p> -->
+      <p class="fw-bold pt-lg-5 pt-0 fs-6 text-white ">Create your account!</p>
+    </div>
+
+    <div class="bg2    text-center shadow pt-lg-4 pt-4">
+      <h1 class="text-light pb-4 fs-4">Signup page</h1>
+      <div class="input-icon-container mb-3">
+        <input type="text" placeholder="Enter your last name"  id="fName" />
+        <i class='bx bx-user bxi'></i>
+      </div>
+        <div class="input-icon-container mb-3">
+        <input type="text" placeholder="Enter your last name" id="lName" />
+        <i class='bx bx-user bxi'></i>
+      </div>
+      <div class="input-icon-container mb-3">
+        <input type="email" placeholder="Enter your email" id="email" />
+        <i class='bx bx-envelope bxi'></i>
+      </div>
+      <div class="input-icon-container mb-3">
+        <input type="text" placeholder="Enter your password" id="password" />
+        <i class='bx bx-lock bxi'></i>
+      </div>
+
+
+      <p class="pt-lg- pt-1 word2 fw-bold" style="color:rgb(255, 115, 0);">Already have an account? <a href="signin.html" style="text-decoration: none;"> <span
+            class="text-light fw-bold">Sign in</span></a></p>
+      <button class="mt-lg-3 mt-0 btn w-75 text-white fw-bold  " onclick="signUp()" style="background-color: rgb(255, 115, 0);border:none;"><span id="sub">Sign up</span>
+        <svg viewBox="25 25 50 50" id="load">
+          <circle r="20" cy="50" cx="50"></circle>
+        </svg> </button>
+      <!-- <button class="btn mt-4 mt-lg-5 mb-lg-3 mb-0 rounded-5 text-white fw-bold border border-black border-2" onclick="signIn()"><span id="sub">Sign in</span>
+        <svg viewBox="25 25 50 50" id="load">
+        <circle r="20" cy="50" cx="50"></circle>
+        </svg> 
+        </button> -->
+      <p class="text-light mt-3 fs-6 fw-bold">or</p>
+      <p class="text-light word2">you sign up with social platform </p>
+      <div class=" mt-lg-4 mt-0 d-flex justify-content-center align-items-center gap-4 fs-3 mt-4">
+        <div>
+          <i class='bx bxl-google' id="b" onclick="signGoogle()"></i>
+        </div>
+        <div>
+          <i class='bx bxl-github' id="b" onclick="signGit()"></i>
+        </div>
+        <div>
+          <!-- <i class='bx bxl-facebook' id="b"></i> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src="script.js"></script>
+
+</html>

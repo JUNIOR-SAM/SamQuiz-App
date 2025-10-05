@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg border-black border-bottom border-3" id="myNavbar">
+  <nav class="navbar fixed-top navbar-expand-lg  border-black border-bottom border-3" id="myNavbar">
     <div class="container-fluid">
       <!-- <a class="navbar-brand " href="#">
         <img src="image/logo.png" style="width:50px;" alt="Logo" />
@@ -38,11 +38,11 @@
         <div class="offcanvas-body fw-bold mt-3 ms-lg-5 ps-lg-5">
           <ul class="navbar-nav mx-lg-auto gap-lg-5 text-lg-center ps-lg-5">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Results/History</a>
-            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white" href="#">Results/History</a>
+            </li> -->
           </ul>
 
           <div class="d-flex flex-column flex-lg-row justify-content-end col-lg-3 col-12 gap-3 mt-1 ms-0">
@@ -50,13 +50,13 @@
               style="width: 50px; height: 50px; border-radius: 50%;position: relative; top:-7px;"
               class="border-2 border border-black mt-0">
 
-            <button class="fw-bold text-black rounded-2 px-3 col-lg-3 col-8 text-center"
+            <button class="fw-bold text-black rounded-2 px-3 col-lg-8 col-8 text-center"
               style="font-size: 15px;background-color: red; text-decoration: none;border: none;height: 35px;"
               id="logoutBtn" onclick="logOut()">Log Out</button>
 
             <!-- 🌙 Theme toggle visible ONLY on desktop -->
-            <button id="themeToggleDesktop" class="btn btn-outline-dark d-none d-lg-block"
-              style="height: 35px;">🌙</button>
+            <!-- <button id="themeToggleDesktop" class="btn btn-outline-dark d-none bg-white d-lg-block"
+              style="height: 35px;">🌙</button> -->
           </div>
         </div>
       </div>
@@ -113,10 +113,10 @@
 
 
 
-    <div class="row justify-content-center gap-lg-3 g-2 text-center" style="margin-top: 50px;">
+    <div class="row justify-content-center gap-lg-3 g-2 text-center" style="margin-top: 30px;">
       <div class="col-lg-3  cad pt-2 col-11">
-      <label for="subjectSelect">Select Subject:</label>
-      <select id="subjectSelect" class="rounded-3 py-1 px-2" style="outline: none;">
+      <label for="subjectSelect" class="pe-lg-4">Select Subject:</label>
+      <select id="subjectSelect" class="rounded-3 py-2 px-2" style="outline: none;">
         <option value="9">General Knowledge</option>
         <option value="27">Animals</option>
         <option value="25">Art</option>
@@ -170,7 +170,7 @@
 
       <div id="quizNavigation" style="display: none; margin-top: 20px;">
         <button type="button" id="prevBtn" onclick="showPreviousQuestion()" class="rounded-3 py-2 text-black px-3" style="background-color: rgb(253, 114, 0);" disabled>Previous</button>
-        <button type="button" id="nextBtn" onclick="showNextQuestion()" style="background-color: rgb(253, 114, 0);">Next</button>
+        <button type="button" id="nextBtn" onclick="showNextQuestion()" style="background-color: rgb(253, 114, 0);" class="rounded-3 py-2 text-black px-3>Next</button>
       </div>
 
       <button type="submit" id="submitQuizBtn" class="rounded-3 py-2 px-3" style="display: none; background-color: rgb(253, 114, 0);">Submit Answers</button>
