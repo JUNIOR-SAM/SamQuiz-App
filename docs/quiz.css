@@ -3,35 +3,100 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* 
-body {
-    background-color: rgb(37, 43, 65);
-    color: white; 
-    font-family: Arial, sans-serif; 
-} */
 
 
-/* Default (Light Mode) */
+/* Smooth transitions */
+* {
+  transition: background-color 1.5s ease, color 0.9s ease, border-color 0.9s ease;
+}
+
+/* LIGHT MODE (default) */
 body {
-  background-color: #f9f9f9;
-  color: #252b41;
-  transition: 0.3s;
+  background-color: #f4f6fc; 
+  color: #222; 
   overflow-x: hidden;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: #252b41; /* your dark navy */
-  color: #f8f8f8;            /* light text */
+/* Navbar and cards */
+.navbar,
+.card,
+.cad,
+.head {
+  background-color: #252b41!important; /* bright blue */
+  /* color: #fff !important; */
+  border: none !important;
 }
 
-/* Button Style */
+/* Theme button design */
 .theme-btn {
-  background: none;
   border: none;
-  font-size: 1.5rem;
+  outline: none;
+  background-color: #e3e3e3;
+  color: #000;
+  font-size: 1.3rem;
+  border-radius: 8px;
   cursor: pointer;
+  padding: 6px 10px;
+  transition: transform 0.3s ease, background-color 0.4s ease;
 }
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #252b41; /* deep navy */
+  color: #f8f8f8;
+}
+
+/* Navbar and cards in dark mode */
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .cad,
+body.dark-mode .head {
+  background-color: #1b2133 !important;
+  color: #f8f8f8 !important;
+  border-color: white !important;
+}
+
+/* Links and texts */
+body.dark-mode a,
+body.dark-mode .nav-link {
+  color: #f8f8f8 !important;
+}
+
+body.dark-mode .btn {
+  border-color: #666 !important;
+}
+
+/* Progress bar customization */
+body.dark-mode .progress-bar {
+  background-color: rgb(255, 115, 0) !important; 
+}
+
+/* Buttons in dark mode */
+body.dark-mode .btn-danger {
+  background-color: red !important;
+  color: #fff !important;
+}
+
+body.dark-mode .theme-btn {
+  background-color: #ffb703;
+  color: #000;
+}
+
+/* Optional: subtle shadow for elegance */
+.card, .cad, .head {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .card,
+body.dark-mode .cad,
+body.dark-mode .head {
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+}
+
 
 .navbar {
     height: 65px;
@@ -55,8 +120,36 @@ body.dark-mode {
   border: none;
 }
 
+/* 
 
+.selected-option {
+  background-color: rgba(0, 128, 0, 0.15); 
+  border-radius: 8px;
+  display: inline-block;
+  padding: 5px 10px;
+} */
 
+input[type="radio"]:checked {
+  accent-color: green; 
+    transform: scale(1.5); /* increases size by 1.5x */
+  margin-right: 8px;  
+}
+
+.navbar {
+  z-index: 1050;
+}
+
+/* Profile picture hover effect */
+#dashboardProfilePic,
+#profilePicMobile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#dashboardProfilePic:hover,
+#profilePicMobile:hover {
+  transform: scale(1.1);
+}
 
 
     
