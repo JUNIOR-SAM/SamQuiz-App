@@ -124,7 +124,7 @@ onAuthStateChanged(auth, (user) => {
         // No user → clear storage and redirect to sign-in page
         localStorage.clear();
         sessionStorage.clear();
-        window.location.href = "signin.html";
+        // window.location.href = "signin.html";
     }
 });
 
