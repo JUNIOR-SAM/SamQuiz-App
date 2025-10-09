@@ -444,7 +444,7 @@ const handleSubmit = (event) => {
         if (isCorrect) score++;
 
         detailedResultsHtml += `
-            <div style="margin-bottom: 10px; padding: 10px; border: 3px solid ${isCorrect ? "green" : "rgb(253, 114, 0)"};" class="rounded-3 col-11 col-lg-5 mx-lg-auto ms-0">
+            <div style="margin-bottom: 10px; padding: 10px; border: 3px solid ${isCorrect ? "green" : "rgb(253, 114, 0)"};" class="rounded-3 col-11 col-lg-5 mx-lg-auto ms-2">
                 <p><strong>Q${index + 1}:</strong> ${safeDecode(q.question)}</p>
                 <p style="color: ${isCorrect ? "green" : "red"};font-weight:bold;">Your Answer: ${selectedAnswer}</p>
                 ${!isCorrect

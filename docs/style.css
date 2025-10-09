@@ -19,17 +19,13 @@
 
 .imager {
   background-image: 
-    linear-gradient(rgba(37, 43, 65, 0.459), rgba(37, 43, 65, 0.945)), 
+    linear-gradient(rgba(37, 43, 65, 0.719), rgba(37, 43, 65, 0.945)), 
     url('image/1600w-kXgHY9jzRZg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 a{
     text-decoration: none;
