@@ -1,12 +1,44 @@
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        signUp();
+    }
+})
+
+
+const toast = (message, bgColor, color, fontWeight, borderRadius, marginTop, fontSize, textAlign) => {
+    Toastify({
+        text: message,
+        duration: 2500,
+        // destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: bgColor,
+            color,
+            fontWeight,
+            borderRadius,
+            marginTop,
+            fontSize,
+            textAlign,
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
+}
+
+
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { 
-    GoogleAuthProvider, 
+import {
+    GoogleAuthProvider,
     GithubAuthProvider,
     TwitterAuthProvider,
-    getAuth, 
-    signInWithPopup, 
-    sendEmailVerification, 
-    createUserWithEmailAndPassword 
+    getAuth,
+    signInWithPopup,
+    sendEmailVerification,
+    createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -31,7 +63,15 @@ const signUp = () => {
     const password = document.getElementById('password').value;
 
     if (!firstName || !lastName || !email || !password) {
-        alert('Please fill out all fields.');
+        load.style.display = 'block'
+        load.style.margin = 'auto'
+        sub.style.display = 'none'
+        setTimeout(() => {
+            load.style.display = 'none'
+            sub.style.display = 'block'
+            toast('Please fill out all fields', 'red', 'white', 'bold', '100px', '20px')
+        }
+            , 3000)
         return;
     }
 
@@ -41,14 +81,54 @@ const signUp = () => {
             if (user) {
                 localStorage.setItem('userName', `${firstName} ${lastName}`);
                 localStorage.setItem('userPhoto', '');
-                window.location.href = "signin.html";
+                load.style.display = 'block'
+                load.style.margin = 'auto'
+                sub.style.display = 'none'
+                setTimeout(() => {
+                    load.style.display = 'none'
+                    sub.style.display = 'block'
+                    toast('sign up successfully', 'green', 'white', 'bold', '100px', '20px', '15px', 'center')
+                    setTimeout(() => {
+                        window.location.href = "signin.html";
+                    }, 3000);
+                }, 7000)
+                return;
             }
         })
         .catch((err) => {
             if (err.code === "auth/weak-password") {
-                alert('Password must be at least 6 characters.');
+                load.style.display = 'block'
+                load.style.margin = 'auto'
+                sub.style.display = 'none'
+                setTimeout(() => {
+                    load.style.display = 'none'
+                    sub.style.display = 'block'
+                    toast('Password must be at least 6 characters.', 'red', 'white', 'bold', '100px', '20px', '15px', 'center')
+                }
+                    , 3000)
+                return;
+            } if (err.code === 'auth/password-does-not-meet-requirements') {
+                load.style.display = 'block'
+                load.style.margin = 'auto'
+                sub.style.display = 'none'
+                setTimeout(() => {
+                    load.style.display = 'none'
+                    sub.style.display = 'block'
+                    toast('password must contain special character, lowercase, uppercase, number and not less than 6 characters.', 'red', 'white', 'bold', '100px', '20px', '15px', 'center')
+                }
+                    , 3000)
+                return;
             } else if (err.code === "auth/email-already-in-use") {
-                alert('Email already registered. Please sign in.');
+                load.style.display = 'block'
+                load.style.margin = 'auto'
+                sub.style.display = 'none'
+                setTimeout(() => {
+                    load.style.display = 'none'
+                    sub.style.display = 'block'
+                    toast('Email already registered. Please sign in.', 'red', 'white', 'bold', '100px', '20px', '15px', 'center')
+                }
+                    , 3000)
+                return;
             } else {
                 alert(`Sign up failed: ${err.code}`);
             }
